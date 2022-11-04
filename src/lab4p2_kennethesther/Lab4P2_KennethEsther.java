@@ -85,7 +85,7 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                                         String nombre = veh[pos];
                                         pos = r.nextInt(jugadores.size() - 1);
                                         String nombrej = jug[pos];
-                                         System.out.println("Ingrese el equipo que quiere ser\n"
+                                        System.out.println("Ingrese el equipo que quiere ser\n"
                                                 + "1 = Azul\n"
                                                 + "2 = Rojo\n"
                                         );
@@ -93,10 +93,10 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                                         if (equipo == 1) {
                                             color = "Azul";
                                         } else if (equipo == 2) {
-                                            color = "Rojo";
+                                            color = "Rojoa";
                                         }
-                                       
-                                        vehiculos.add(new Aviones(nombre, daño, i, i, vida, jugadores.get(pos), color));
+                                                                             
+                                        vehiculos.add(new Aviones(nombre, daño, 0, 0, vida, jugadores.get(pos), color));
                                         
                                         System.out.println("");
                                         
