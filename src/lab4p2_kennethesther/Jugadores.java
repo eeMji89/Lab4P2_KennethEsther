@@ -10,4 +10,29 @@ package lab4p2_kennethesther;
  */
 public class Jugadores {
     
+    protected String nombre;
+    protected int victorias;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getVictorias() {
+        return victorias;
+    }
+
+    public void setVictorias(int victorias) {
+        this.victorias = victorias;
+    }
+
+    @Override
+    public String toString() {
+        return "Jugadores{" + "nombre=" + nombre + ", victorias=" + victorias + '}';
+    }
+    
+    
 }
