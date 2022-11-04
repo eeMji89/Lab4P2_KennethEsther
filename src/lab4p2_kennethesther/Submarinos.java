@@ -17,7 +17,7 @@ public class Submarinos extends Vehiculos{
         super();
     }
 
-    public Submarinos(String nombre, int dano, int x, int y, int vida, Jugadores conductor, Color color) {
+    public Submarinos(String nombre, int dano, int x, int y, int vida, Jugadores conductor, String color) {
         super(nombre, dano, x, y, vida, conductor, color);
     }
 

@@ -22,7 +22,9 @@ static String veh [] = {"Ingrid", "Hola", "Adios", "Blood", "Hound", "Sombra", "
      */
     public static void main(String[] args) {
          
-      
+      ArrayList Rojo = new ArrayList();
+      ArrayList Azul = new ArrayList();
+
         
        boolean flag = true;
         while (flag == true) {            
@@ -49,30 +51,76 @@ static String veh [] = {"Ingrid", "Hola", "Adios", "Blood", "Hound", "Sombra", "
                         
                         switch (opcion2){
                             case 1:{
+                                System.out.println("Cuantos jugadores desea crear:");
+                                int v = lea.nextInt();
+                                for (int i = 0; i < v; i++) {
                                 int pos, victorias = 0;                                                          
                                 pos = r.nextInt(jug.length-1);
                                 String nombre = jug[pos];
                                 jugadores.add(new Jugadores(nombre, victorias));
+                                }                               
                                 System.out.println(jugadores);                                
                             }
                             break;
-                            case 2:{
-                                
+                            case 2:{                               
                                 System.out.println("Cuantos vehiculos desea crear:");
                                 int v = lea.nextInt();
-                                int cont =0;
+
                                 for (int i = 0; i < v; i++) {
-                                int pos;                                                       
-                                pos = r.nextInt(veh.length-1);
-                                int daño= 100+r.nextInt(150);
-                                int vida= 500+r.nextInt(1000);
-                                String nombre= veh[pos];
-                                Jugadores j= new Jugadores();
-                                j= jugadores.get(cont);
-                                vehiculos.add(new Vehiculos(nombre, daño, 0, 0, vida, j, Color.yellow));
+                                                                                     
+                                System.out.println("Que tipo de vehiculo quiere ser?");
+                                System.out.println("1. Avion");
+                                System.out.println("2. Barco");
+                                System.out.println("3. Submarino");                              
+                                int ve = lea.nextInt();
+                                
+                                switch(ve){
+                                    
+                                    case 1:{
+                                        int pos, pos2;
+                                        String color = "";
+                                        pos = r.nextInt(veh.length - 1);
+                                        int daño = 100 + r.nextInt(150);
+                                        int vida = 500 + r.nextInt(1000);
+                                        String nombre = veh[pos];
+                                        pos = r.nextInt(jug.length - 1);
+                                        String nombrej = jug[pos];
+                                         System.out.println("Ingrese el equipo que quiere ser\n"
+                                                + "1 = Azul\n"
+                                                + "2 = Rojo\n"
+                                        );
+                                        int equipo = lea.nextInt();
+                                        if (equipo == 1) {
+                                            color = "Azul";
+                                        } else if (equipo == 2) {
+                                            color = "Rojo";
+                                        }
+                                       
+                                        vehiculos.add(new Aviones(nombre, daño, i, i, vida, jugadores.get(pos), color));
+                                        
+                                        System.out.println("");
+                                        
+                                        
+                                        
+                                    }
+                                    break;
+                                    case 2:{
+                                        
+                                    }
+                                    break;
+                                    case 3:{
+                                        
+                                    }
+                                    break;
+                                    
+                                }
                                                                                                    
                             }
                                 System.out.println(vehiculos);
+                                
+                              
+                                
+                                
                             }
                             break;
                             case 3:{
@@ -98,7 +146,7 @@ static String veh [] = {"Ingrid", "Hola", "Adios", "Blood", "Hound", "Sombra", "
         
         
     }
-    public static ArrayList vealeatorios(ArrayList<Vehiculos> ve,int v){
+    /*public static ArrayList vealeatorios(ArrayList<Vehiculos> ve,int v){
         int cont =0,vv=0;
         for (int i = 0; i < v; i++) {
             int pos;   
@@ -126,6 +174,6 @@ static String veh [] = {"Ingrid", "Hola", "Adios", "Blood", "Hound", "Sombra", "
         }
         return ve;
     }
-    
+    */
     
 }

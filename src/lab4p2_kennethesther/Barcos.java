@@ -17,7 +17,7 @@ public class Barcos extends Vehiculos{
         super();
     }
 
-    public Barcos(String nombre, int dano, int x, int y, int vida, Jugadores conductor, Color color) {
+    public Barcos(String nombre, int dano, int x, int y, int vida, Jugadores conductor, String color) {
         super(nombre, dano, x, y, vida, conductor, color);
     }
     
