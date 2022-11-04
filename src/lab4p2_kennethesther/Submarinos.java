@@ -31,6 +31,7 @@ public class Submarinos extends Vehiculos{
     public int jugada(int x, int y) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
     
     
 }

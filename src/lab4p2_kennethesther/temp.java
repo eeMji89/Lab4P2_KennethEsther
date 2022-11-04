@@ -13,7 +13,7 @@ import java.util.Random;
  */
 public class temp {
     static Random r = new Random();
-    public static char [][] jugar(int [][]matriz,ArrayList<Vehiculos>v, ArrayList<Vehiculos>ve){
+    public static char [][] jugar(char [][]matriz,ArrayList<Vehiculos>v, ArrayList<Vehiculos>ve){
         int vn = 0+r.nextInt(v.size()-1);
        int x=0, y=0;
         for (int i = 0; i < v.size()-1; i++) {

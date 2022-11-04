@@ -92,7 +92,7 @@ public abstract class Vehiculos implements movimimiento{
 
 
     @Override
-    public abstract int jugada(int x, int y) ;
+    public abstract int jugada(int x, int y);
     
 
   
