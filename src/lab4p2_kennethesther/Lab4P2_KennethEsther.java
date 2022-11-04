@@ -12,10 +12,10 @@ import java.util.Scanner;
  */
 public class Lab4P2_KennethEsther {
 static Scanner lea = new Scanner(System.in);
-    static Random r = new Random();
+static Random r = new Random();
 static String jug [] = {"Hernesto", "Carlos", "Andrés", "Momia", "Goku", "Hector", "Luis", "Rigoberto", "Kenneth", "Esther", "Cassidy", "Bloodhound", "Pedro", "Mario", "Naruto", "Pepe", "Orlando", "Max", "Jonathan", "Lobo"};
 static String veh [] = {"Ingrid", "Hola", "Adios", "Blood", "Hound", "Sombra", "Reinhard", "Mercy", "Bye", "Joseph", "Rigo", "No", "Si", "MaL", "Bien", "Lab", "Luigi", "Bayoneta", "Roblox", "Juan", "Orlando", "James", "Andrecito"};
- static ArrayList <Jugadores> jugadores = new ArrayList();
+static ArrayList <Jugadores> jugadores = new ArrayList();
        static ArrayList <Vehiculos> vehiculos = new ArrayList();    
        /**
      * @param args the command line arguments
@@ -141,9 +141,7 @@ static String veh [] = {"Ingrid", "Hola", "Adios", "Blood", "Hound", "Sombra", "
                     
             }
             
-        }
-        
-        
+        }              
         
     }
     /*public static ArrayList vealeatorios(ArrayList<Vehiculos> ve,int v){

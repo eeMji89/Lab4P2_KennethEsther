@@ -7,7 +7,7 @@ import java.awt.Color;
  *
  * @author ELIZABETH HERNANDEZ
  */
-public class Vehiculos{
+public abstract class Vehiculos implements movimimiento{
     protected String nombre;
     protected int dano;
     protected int x;
@@ -90,7 +90,13 @@ public class Vehiculos{
         return "Vehiculos{" + "nombre=" + nombre + ", dano=" + dano + ", x=" + x + ", y=" + y + ", vida=" + vida + ", conductor=" + conductor + ", color=" + color + '}';
     }
 
+
+    @Override
+    public abstract int jugada(int x, int y);
     
+
+  
+
   
     
 }

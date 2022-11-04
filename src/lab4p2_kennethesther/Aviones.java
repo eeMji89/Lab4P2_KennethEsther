@@ -17,6 +17,11 @@ public class Aviones extends Vehiculos {
         super(nombre, dano, x, y, vida, conductor, color);
     }
 
+    @Override
+    public int jugada(int x,int y) {
+        
+    }
+
    
     
 }
