@@ -7,7 +7,7 @@ import java.awt.Color;
  *
  * @author ELIZABETH HERNANDEZ
  */
-public class Vehiculos {
+public abstract class Vehiculos implements movimimiento{
     protected String nombre;
     protected int dano;
     protected int x;
