@@ -93,7 +93,7 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                                         if (equipo == 1) {
                                             color = "Azul";
                                         } else if (equipo == 2) {
-                                            color = "Rojo";
+                                            color = "Rojoa";
                                         }
                                                                              
                                         vehiculos.add(new Aviones(nombre, daño, 0, 0, vida, jugadores.get(pos), color));
