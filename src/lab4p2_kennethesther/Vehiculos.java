@@ -14,17 +14,12 @@ public abstract class Vehiculos implements movimimiento{
     protected int y;
     protected int vida;
     protected Jugadores conductor;
-    protected Color color;
+    protected String color;
 
     public Vehiculos() {
     }
 
-    public Vehiculos(String nombre) {
-        this.nombre = nombre;
-    }
-   
-
-    public Vehiculos(String nombre, int dano, int x, int y, int vida, Jugadores conductor, Color color) {
+    public Vehiculos(String nombre, int dano, int x, int y, int vida, Jugadores conductor, String color) {
         this.nombre = nombre;
         this.dano = dano;
         this.x = x;
@@ -82,13 +77,11 @@ public abstract class Vehiculos implements movimimiento{
         this.conductor = conductor;
     }
 
-   
-
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
@@ -96,6 +89,7 @@ public abstract class Vehiculos implements movimimiento{
     public String toString() {
         return "Vehiculos{" + "nombre=" + nombre + ", dano=" + dano + ", x=" + x + ", y=" + y + ", vida=" + vida + ", conductor=" + conductor + ", color=" + color + '}';
     }
+
 
     @Override
     public abstract int jugada(int x, int y) ;
