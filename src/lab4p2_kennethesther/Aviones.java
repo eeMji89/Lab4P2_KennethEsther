@@ -19,7 +19,8 @@ public class Aviones extends Vehiculos {
 
     @Override
     public int jugada(int x,int y) {
-        
+       int o=0;
+       return o;
     }
 
    
