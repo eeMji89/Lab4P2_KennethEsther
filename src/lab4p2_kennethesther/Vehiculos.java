@@ -13,7 +13,7 @@ public class Vehiculos{
     protected int x;
     protected int y;
     protected int vida;
-    protected String conductor;
+    protected Jugadores conductor;
     protected Color color;
 
     public Vehiculos() {
@@ -24,7 +24,7 @@ public class Vehiculos{
     }
    
 
-    public Vehiculos(String nombre, int dano, int x, int y, int vida, String conductor, Color color) {
+    public Vehiculos(String nombre, int dano, int x, int y, int vida, Jugadores conductor, Color color) {
         this.nombre = nombre;
         this.dano = dano;
         this.x = x;
@@ -74,13 +74,15 @@ public class Vehiculos{
         this.vida = vida;
     }
 
-    public String getConductor() {
+    public Jugadores getConductor() {
         return conductor;
     }
 
-    public void setConductor(String conductor) {
+    public void setConductor(Jugadores conductor) {
         this.conductor = conductor;
     }
+
+   
 
     public Color getColor() {
         return color;
@@ -94,5 +96,7 @@ public class Vehiculos{
     public String toString() {
         return "Vehiculos{" + "nombre=" + nombre + ", dano=" + dano + ", x=" + x + ", y=" + y + ", vida=" + vida + ", conductor=" + conductor + ", color=" + color + '}';
     }
+
+  
     
 }
