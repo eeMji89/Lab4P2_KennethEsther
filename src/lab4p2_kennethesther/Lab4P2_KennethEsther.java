@@ -2,6 +2,7 @@
 package lab4p2_kennethesther;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -10,6 +11,8 @@ import java.util.Scanner;
  */
 public class Lab4P2_KennethEsther {
 static Scanner lea = new Scanner(System.in);
+    static Random r = new Random();
+
     /**
      * @param args the command line arguments
      */
@@ -18,8 +21,8 @@ static Scanner lea = new Scanner(System.in);
        ArrayList <Jugadores> jugadores = new ArrayList();
        ArrayList <Vehiculos> vehiculos = new ArrayList();
         
-       boolean flag = false;
-        while (flag== false) {            
+       boolean flag = true;
+        while (flag == true) {            
             System.out.println("MENU");
             System.out.println("0. Salir");
             System.out.println("1. Crear jugadores y equipos");
@@ -27,21 +30,27 @@ static Scanner lea = new Scanner(System.in);
             int opcion = lea.nextInt();
             switch (opcion) {
                 case 0:
-                    
+                    flag = false;
                     break;
+                default:
+                    System.out.println("Hola");
                 case 1:
-                   boolean crear = false;
+                   boolean crear = true;
                    String jug [] = {"Hernesto", "Carlos", "Andrés", "Momia", "Goku", "Hector", "Luis", "Rigoberto", "Kenneth", "Esther", "Cassidy", "Bloodhound", "Pedro", "Mario", "Naruto", "Pepe", "Orlando", "Max", "Jonathan", "Lobo"};
                    String veh [] = {"Ingrid", "Hola", "Adios", "Blood", "Hound", "Sombra", "Reinhard", "Mercy", "Bye", "Joseph", "Rigo", "No", "Si", "MaL", "Bien", "Lab", "Luigi", "Bayoneta", "Roblox", "Juan", "Orlando", "James"};
                     while (crear == true) {                        
-                        System.out.println("1. Crear un jugador");
-                        System.out.println("2. Crear un vehiculo");
+                        System.out.println("1. Crear jugadores");
+                        System.out.println("2. Crear vehiculos");
                         System.out.println("3. Salir");
                         int opcion2 = lea.nextInt();
                         
                         switch (opcion2){
                             case 1:{
-                                
+                                int pos, victorias = 0;                                                          
+                                pos = r.nextInt(jug.length-1);
+                                String nombre = jug[pos];
+                                jugadores.add(new Jugadores(nombre, victorias));
+                                System.out.println(jugadores);                                
                             }
                             break;
                             case 2:{
@@ -49,20 +58,20 @@ static Scanner lea = new Scanner(System.in);
                             }
                             break;
                             case 3:{
-                                
+                                crear = false;
                             }
                             break;
+                            default:
+                                System.out.println("Hola");
                             
-                            
-                        }
+                        }// fin switch crear jugadores
                         
                     }
                     
                     break;
                 case 2:
-                    break;
                     
-                default:
+                    break;
                     
             }
             

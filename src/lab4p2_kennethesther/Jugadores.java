@@ -13,6 +13,11 @@ public class Jugadores {
     protected String nombre;
     protected int victorias;
 
+    public Jugadores(String nombre, int victorias) {
+        this.nombre = nombre;
+        this.victorias = victorias;
+    }
+    
     public String getNombre() {
         return nombre;
     }
