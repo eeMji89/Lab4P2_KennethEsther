@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
+
 package lab4p2_kennethesther;
 
 /**
@@ -10,7 +7,7 @@ package lab4p2_kennethesther;
  */
 public interface movimimiento {
     
-    public void mover();
-    public void ataque();
+    public abstract int jugada( int x, int y);
+    
       
 }

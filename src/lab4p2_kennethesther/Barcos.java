@@ -28,5 +28,12 @@ public class Barcos extends Vehiculos{
     public String toString() {
         return "Barcos{" +super.toString()+ '}';
     }
+
+    @Override
+    public int jugada(int x, int y) {
+        int ataq=0;
+        
+        return ataq;
+    }
     
 }
