@@ -7,19 +7,24 @@ import java.awt.Color;
  *
  * @author ELIZABETH HERNANDEZ
  */
-public abstract class Vehiculos implements movimimiento{
+public class Vehiculos{
     protected String nombre;
     protected int dano;
     protected int x;
     protected int y;
     protected int vida;
-    protected Jugadores conductor;
+    protected String conductor;
     protected Color color;
 
     public Vehiculos() {
     }
 
-    public Vehiculos(String nombre, int dano, int x, int y, int vida, Jugadores conductor, Color color) {
+    public Vehiculos(String nombre) {
+        this.nombre = nombre;
+    }
+   
+
+    public Vehiculos(String nombre, int dano, int x, int y, int vida, String conductor, Color color) {
         this.nombre = nombre;
         this.dano = dano;
         this.x = x;
@@ -69,11 +74,11 @@ public abstract class Vehiculos implements movimimiento{
         this.vida = vida;
     }
 
-    public Jugadores getConductor() {
+    public String getConductor() {
         return conductor;
     }
 
-    public void setConductor(Jugadores conductor) {
+    public void setConductor(String conductor) {
         this.conductor = conductor;
     }
 

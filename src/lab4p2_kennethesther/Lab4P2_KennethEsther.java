@@ -55,6 +55,17 @@ static Scanner lea = new Scanner(System.in);
                             break;
                             case 2:{
                                 
+                                System.out.println("Cuantos vehiculos desea crear:");
+                                int v = lea.nextInt();
+                                
+                                for (int i = 0; i < v; i++) {
+                                int pos;                                                       
+                                pos = r.nextInt(veh.length-1);
+                                String nombre = veh[pos];
+                                vehiculos.add(new Vehiculos(nombre));
+                                                                                                   
+                            }
+                                System.out.println(vehiculos);
                             }
                             break;
                             case 3:{
