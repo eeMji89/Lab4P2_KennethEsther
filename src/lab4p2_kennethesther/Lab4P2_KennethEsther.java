@@ -37,7 +37,7 @@ static Scanner lea = new Scanner(System.in);
                 case 1:
                    boolean crear = true;
                    String jug [] = {"Hernesto", "Carlos", "Andrés", "Momia", "Goku", "Hector", "Luis", "Rigoberto", "Kenneth", "Esther", "Cassidy", "Bloodhound", "Pedro", "Mario", "Naruto", "Pepe", "Orlando", "Max", "Jonathan", "Lobo"};
-                   String veh [] = {"Ingrid", "Hola", "Adios", "Blood", "Hound", "Sombra", "Reinhard", "Mercy", "Bye", "Joseph", "Rigo", "No", "Si", "MaL", "Bien", "Lab", "Luigi", "Bayoneta", "Roblox", "Juan", "Orlando", "James"};
+                   String veh [] = {"Ingrid", "Hola", "Adios", "Blood", "Hound", "Sombra", "Reinhard", "Mercy", "Bye", "Joseph", "Rigo", "No", "Si", "MaL", "Bien", "Lab", "Luigi", "Bayoneta", "Roblox", "Juan", "Orlando", "James", "Andrecito"};
                     while (crear == true) {                        
                         System.out.println("1. Crear jugadores");
                         System.out.println("2. Crear vehiculos");
