@@ -85,7 +85,7 @@ static String veh [] = {"Ingrid", "Hola", "Adios", "Blood", "Hound", "Sombra", "
                                         String nombre = veh[pos];
                                         pos = r.nextInt(jug.length - 1);
                                         String nombrej = jug[pos];
-                                         System.out.println("Ingrese el equipo que quiere ser\n"
+                                        System.out.println("Ingrese el equipo que quiere ser\n"
                                                 + "1 = Azul\n"
                                                 + "2 = Rojo\n"
                                         );
@@ -96,7 +96,7 @@ static String veh [] = {"Ingrid", "Hola", "Adios", "Blood", "Hound", "Sombra", "
                                             color = "Rojo";
                                         }
                                        
-                                        vehiculos.add(new Aviones(nombre, daño, i, i, vida, jugadores.get(pos), color));
+                                        vehiculos.add(new Aviones(nombre, daño, 0, 0, vida, jugadores.get(pos), color));
                                         
                                         System.out.println("");
                                         
