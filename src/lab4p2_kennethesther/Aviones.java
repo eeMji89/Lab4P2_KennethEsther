@@ -17,6 +17,24 @@ public class Aviones extends Vehiculos {
         super(nombre, dano, x, y, vida, conductor, color);
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    
+    
     @Override
     public int jugada(int x,int y) {
        int o=0;
