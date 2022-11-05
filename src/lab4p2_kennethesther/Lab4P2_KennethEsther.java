@@ -151,7 +151,7 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                     int e = lea.nextInt();
                     
                     char [][]matriz= new char [5][5];
-                    matriz = generarM(matriz);
+                    
                     
                     imprimirM(matriz);
                     matriz = Matrizj(matriz,e, vehiculos);
@@ -203,10 +203,10 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
     public static char [][] Matrizj(char [][]matriz,int e,ArrayList<Vehiculos>v){
         int vn = 0+r.nextInt(v.size()-1);
        int x=0, y=0;
-        for (int i = 0; i <= e; i++) {
+        for (int i = 0; i < e; i++) {
             if (v.get(i) instanceof Barcos) {
                 x= 0+r.nextInt(v.size()-1);
-                y = 0+r.nextInt(v.size()-1);;
+                y = 0+r.nextInt(v.size()-2);
                 matriz[x][y]='B';
             }
             else if (v.get(i) instanceof Aviones) {
@@ -216,14 +216,14 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
             }
             else if (v.get(i) instanceof Submarinos) {
                 x= 0+r.nextInt(v.size()-1);
-                y = 0+r.nextInt(v.size()-1);;
+                y = 1+r.nextInt(v.size()-1);
                 matriz[x][y]='S';
             }  
         }
-        for (int i = e+1; i <= v.size(); i++) {
+        for (int i = e; i <= v.size()-1; i++) {
             if (v.get(i) instanceof Barcos) {
                 x= 0+r.nextInt(v.size()-1);
-                y = 0+r.nextInt(v.size()-1);
+                y = 0+r.nextInt(v.size()-2);
                 matriz[x][y]='b';
             }
             else if (v.get(i) instanceof Aviones) {
@@ -233,7 +233,7 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
             }
             else if (v.get(i) instanceof Submarinos) {
                 x= 0+r.nextInt(v.size()-1);
-                y = 0+r.nextInt(v.size()-1);;
+                y = 1+r.nextInt(v.size()-1);
                 matriz[x][y]='s';
             }  
         }
@@ -250,7 +250,13 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
     }
     
     public static char [][]Jugar(char [][]matriz){
-        
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (matriz[i][j]=='B') {
+                    
+                }
+            }
+        }
         return matriz;
     }
 }
