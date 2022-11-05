@@ -65,71 +65,7 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                                 System.out.println("Cuantos vehiculos desea crear:");
                                 int v = lea.nextInt();
                                 vehiculos = vealeatorios(vehiculos, v);
-                                /*for (int i = 0; i < v; i++) {
-                                                                                     
-                                System.out.println("Que tipo de vehiculo quiere ser?");
-                                System.out.println("1. Avion");
-                                System.out.println("2. Barco");
-                                System.out.println("3. Submarino");                              
-                                int ve = lea.nextInt();
                                 
-                                switch(ve){
-                                    
-                                    case 1:{
-                                        int pos, pos2;
-                                        String color = "";
-                                        pos = r.nextInt(veh.length - 1);
-                                        int daño = 100 + r.nextInt(150);
-                                        int vida = 500 + r.nextInt(1000);
-                                        String nombre = veh[pos];
-                                        pos = r.nextInt(jugadores.size() - 1);
-                                        String nombrej = jug[pos];
-                                        
-                                                                             
-                                        vehiculos.add(new Aviones(nombre, daño, 0, 0, vida, jugadores.get(pos), color));
-                                        
-                                     
-                                        
-                                        
-                                        
-                                    }
-                                    break;
-                                    case 2:{
-                                        int pos, pos2;
-                                        String color = "";
-                                        pos = r.nextInt(veh.length - 1);
-                                        int daño = 100 + r.nextInt(150);
-                                        int vida = 500 + r.nextInt(1000);
-                                        String nombre = veh[pos];
-                                        pos = r.nextInt(jugadores.size() - 1);
-                                        String nombrej = jug[pos];
-                                        
-                                                                             
-                                        vehiculos.add(new Barcos(nombre, daño, 0, 0, vida, jugadores.get(pos), color));
-                                        
-                                       
-                                    }
-                                    break;
-                                    case 3:{
-                                        int pos, pos2;
-                                        String color = "";
-                                        pos = r.nextInt(veh.length - 1);
-                                        int daño = 100 + r.nextInt(150);
-                                        int vida = 500 + r.nextInt(1000);
-                                        String nombre = veh[pos];
-                                        pos = r.nextInt(jugadores.size() - 1);
-                                        String nombrej = jug[pos];
-                                        
-                                                                             
-                                        vehiculos.add(new Submarinos(nombre, daño, 0, 0, vida, jugadores.get(pos), color));
-                                        
-                                        System.out.println("");
-                                    }
-                                    break;
-                                    
-                                }
-                                                                                                   
-                            }*/
                                 System.out.println(vehiculos);  
                                                                
                             }
