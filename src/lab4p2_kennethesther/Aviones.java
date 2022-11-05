@@ -33,6 +33,12 @@ public class Aviones extends Vehiculos {
         this.y = y;
     }
 
+    @Override
+    public String toString() {
+        return super.toString()+"Aviones{" + '}';
+    }
+
+    
     
     
     @Override
