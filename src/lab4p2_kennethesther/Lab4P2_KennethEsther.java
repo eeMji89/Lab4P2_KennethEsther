@@ -21,7 +21,7 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         
+         try{
       ArrayList Rojo = new ArrayList();
       ArrayList Azul = new ArrayList();
 
@@ -61,12 +61,14 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                                 System.out.println(jugadores);                                
                             }
                             break;
-                            case 2:{                               
-                                System.out.println("Cuantos vehiculos desea crear:");
+                            case 2:{   
+                              
+                                    System.out.println("Cuantos vehiculos desea crear:");
                                 int v = lea.nextInt();
                                 vehiculos = vealeatorios(vehiculos, v);
                                 
                                 System.out.println(vehiculos);  
+                               
                                                                
                             }
                             break;
@@ -99,7 +101,13 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
         }              
         
     }
+         catch(Exception e){
+             
+             e.getMessage();
+         }
+    }
     public static ArrayList vealeatorios(ArrayList<Vehiculos> ve,int v){
+        
         int cont =0,vv=0;
         for (int i = 0; i < v; i++) {
             int pos;   
