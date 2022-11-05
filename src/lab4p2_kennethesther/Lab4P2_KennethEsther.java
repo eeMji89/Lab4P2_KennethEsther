@@ -84,20 +84,11 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                                         String nombre = veh[pos];
                                         pos = r.nextInt(jugadores.size() - 1);
                                         String nombrej = jug[pos];
-                                        System.out.println("Ingrese el equipo que quiere ser\n"
-                                                + "1 = Azul\n"
-                                                + "2 = Rojo\n"
-                                        );
-                                        int equipo = lea.nextInt();
-                                        if (equipo == 1) {
-                                            color = "Azul";
-                                        } else if (equipo == 2) {
-                                            color = "Rojoa";
-                                        }
+                                        
                                                                              
                                         vehiculos.add(new Aviones(nombre, daño, 0, 0, vida, jugadores.get(pos), color));
                                         
-                                        System.out.println("");
+                                     
                                         
                                         
                                         
@@ -112,20 +103,11 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                                         String nombre = veh[pos];
                                         pos = r.nextInt(jugadores.size() - 1);
                                         String nombrej = jug[pos];
-                                        System.out.println("Ingrese el equipo que quiere ser\n"
-                                                + "1 = Azul\n"
-                                                + "2 = Rojo\n"
-                                        );
-                                        int equipo = lea.nextInt();
-                                        if (equipo == 1) {
-                                            color = "Azul";
-                                        } else if (equipo == 2) {
-                                            color = "Rojoa";
-                                        }
+                                        
                                                                              
                                         vehiculos.add(new Barcos(nombre, daño, 0, 0, vida, jugadores.get(pos), color));
                                         
-                                        System.out.println("");
+                                       
                                     }
                                     break;
                                     case 3:{
@@ -137,16 +119,7 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                                         String nombre = veh[pos];
                                         pos = r.nextInt(jugadores.size() - 1);
                                         String nombrej = jug[pos];
-                                        System.out.println("Ingrese el equipo que quiere ser\n"
-                                                + "1 = Azul\n"
-                                                + "2 = Rojo\n"
-                                        );
-                                        int equipo = lea.nextInt();
-                                        if (equipo == 1) {
-                                            color = "Azul";
-                                        } else if (equipo == 2) {
-                                            color = "Rojoa";
-                                        }
+                                        
                                                                              
                                         vehiculos.add(new Submarinos(nombre, daño, 0, 0, vida, jugadores.get(pos), color));
                                         
@@ -157,11 +130,8 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                                 }
                                                                                                    
                             }
-                                System.out.println(vehiculos);
                                 
-                              
-                                
-                                
+                                                               
                             }
                             break;
                             case 3:{
