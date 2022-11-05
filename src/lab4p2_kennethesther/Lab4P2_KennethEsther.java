@@ -147,11 +147,14 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                     
                     break;
                 case 2:
+                    System.out.println("Cuantos jugadores tendra cada equipo?:");
+                    int e = lea.nextInt();
+                    
                     char [][]matriz= new char [5][5];
                     matriz = generarM(matriz);
                     
                     imprimirM(matriz);
-                    matriz = jugar(matriz, vehiculos, vehiculos);
+                    matriz = jugar(matriz,e, vehiculos);
                     imprimirM(matriz);
                     break;
                     
@@ -197,10 +200,10 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
             System.out.println("");
         }
     }
-    public static char [][] jugar(char [][]matriz,ArrayList<Vehiculos>v, ArrayList<Vehiculos>ve){
+    public static char [][] jugar(char [][]matriz,int e,ArrayList<Vehiculos>v){
         int vn = 0+r.nextInt(v.size()-1);
        int x=0, y=0;
-        for (int i = 0; i < v.size()-1; i++) {
+        for (int i = 0; i < e; i++) {
             if (v.get(i) instanceof Barcos) {
                 x= 0+r.nextInt(v.size()-1);
                 y = 0+r.nextInt(v.size()-1);;
@@ -217,18 +220,18 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                 matriz[x][y]='S';
             }  
         }
-        for (int i = 0; i < ve.size()-1; i++) {
-            if (ve.get(i) instanceof Barcos) {
+        for (int i = e; i < v.size()-1; i++) {
+            if (v.get(i) instanceof Barcos) {
                 x= 0+r.nextInt(v.size()-1);
                 y = 0+r.nextInt(v.size()-1);
                 matriz[x][y]='b';
             }
-            else if (ve.get(i) instanceof Aviones) {
+            else if (v.get(i) instanceof Aviones) {
                 x= 0+r.nextInt(v.size()-1);
                 y = 0+r.nextInt(v.size()-1);
                 matriz[x][y]='a';
             }
-            else if (ve.get(i) instanceof Submarinos) {
+            else if (v.get(i) instanceof Submarinos) {
                 x= 0+r.nextInt(v.size()-1);
                 y = 0+r.nextInt(v.size()-1);;
                 matriz[x][y]='s';
