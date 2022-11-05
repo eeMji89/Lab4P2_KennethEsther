@@ -37,8 +37,7 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                 case 0:
                     flag = false;
                     break;
-                default:
-                    System.out.println("Hola");
+           
                 case 1:
                    boolean crear = true;
                   
@@ -178,7 +177,12 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                     
                     break;
                 case 2:
+                    char [][]matriz= new char [5][5];
+                    matriz = generarM(matriz);
                     
+                    imprimirM(matriz);
+                    matriz = jugar(matriz, vehiculos, vehiculos);
+                    imprimirM(matriz);
                     break;
                     
             }
@@ -215,13 +219,21 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
         return ve;
     }
     */
+    public static void imprimirM(char[][]matriz){
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print("["+matriz[i][j]+"]");
+            }
+            System.out.println("");
+        }
+    }
     public static char [][] jugar(char [][]matriz,ArrayList<Vehiculos>v, ArrayList<Vehiculos>ve){
         int vn = 0+r.nextInt(v.size()-1);
        int x=0, y=0;
         for (int i = 0; i < v.size()-1; i++) {
             if (v.get(i) instanceof Barcos) {
                 x= 0+r.nextInt(v.size()-1);
-                y = 1;
+                y = 0+r.nextInt(v.size()-1);;
                 matriz[x][y]='B';
             }
             else if (v.get(i) instanceof Aviones) {
@@ -231,14 +243,14 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
             }
             else if (v.get(i) instanceof Submarinos) {
                 x= 0+r.nextInt(v.size()-1);
-                y = 0;
+                y = 0+r.nextInt(v.size()-1);;
                 matriz[x][y]='S';
             }  
         }
         for (int i = 0; i < ve.size()-1; i++) {
             if (ve.get(i) instanceof Barcos) {
                 x= 0+r.nextInt(v.size()-1);
-                y = 8;
+                y = 0+r.nextInt(v.size()-1);
                 matriz[x][y]='b';
             }
             else if (ve.get(i) instanceof Aviones) {
@@ -248,14 +260,14 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
             }
             else if (ve.get(i) instanceof Submarinos) {
                 x= 0+r.nextInt(v.size()-1);
-                y = 9;
+                y = 0+r.nextInt(v.size()-1);;
                 matriz[x][y]='s';
             }  
         }
        return matriz; 
     }
     
-    public char [][]generarM(char [][] matriz){
+    public static char [][]generarM(char [][] matriz){
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
                 matriz[i][j]=' ';
