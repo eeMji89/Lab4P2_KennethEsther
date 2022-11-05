@@ -87,7 +87,7 @@ public abstract class Vehiculos implements movimimiento{
 
     @Override
     public String toString() {
-        return "Vehiculos{" + "nombre=" + nombre + ", dano=" + dano + ", x=" + x + ", y=" + y + ", vida=" + vida + ", conductor=" + conductor + ", color=" + color + '}';
+        return "nombre=" + nombre + ", dano=" + dano + ", x=" + x + ", y=" + y + ", vida=" + vida + ", conductor=" + conductor + ", color=" + color + '}';
     }
 
 

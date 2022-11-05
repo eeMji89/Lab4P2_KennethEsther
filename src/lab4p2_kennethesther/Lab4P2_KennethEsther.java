@@ -154,7 +154,7 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
                     matriz = generarM(matriz);
                     
                     imprimirM(matriz);
-                    matriz = jugar(matriz,e, vehiculos);
+                    matriz = Matrizj(matriz,e, vehiculos);
                     imprimirM(matriz);
                     break;
                     
@@ -200,7 +200,7 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
             System.out.println("");
         }
     }
-    public static char [][] jugar(char [][]matriz,int e,ArrayList<Vehiculos>v){
+    public static char [][] Matrizj(char [][]matriz,int e,ArrayList<Vehiculos>v){
         int vn = 0+r.nextInt(v.size()-1);
        int x=0, y=0;
         for (int i = 0; i <= e; i++) {
@@ -249,4 +249,8 @@ static ArrayList <Jugadores> jugadores = new ArrayList();
         return matriz;
     }
     
+    public static char [][]Jugar(char [][]matriz){
+        
+        return matriz;
+    }
 }
